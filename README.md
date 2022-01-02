@@ -1,11 +1,8 @@
 # NumberToKanji
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/number_to_kanji`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+NumberToKanji is a Ruby Gem that translates number (integer) to Japanese Kanji.
+It supports numbers between 0 to 10^24 ("垓").
 
 ## Installation
-
 Add this line to your application's Gemfile:
 
 ```ruby
@@ -14,25 +11,37 @@ gem 'number_to_kanji'
 
 And then execute:
 
-    $ bundle install
+```
+$ bundle install
+```
 
 Or install it yourself as:
 
-    $ gem install number_to_kanji
+```
+$ gem install number_to_kanji
+```
 
 ## Usage
+```ruby
+require 'number_to_kanji'
 
-TODO: Write usage instructions here
+NumberToKanji.call(123) #=> "百二十三"
+NumberToKanji.call(123456) #=> "十二万三千四百五十六"
+NumberToKanji.call(123456789) #=> "一億二千三百四十五万六千七百八十九"
+```
 
 ## Development
+To install dependencies, run:
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+```
+bin/setup
+```
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To run the tests and the linters, run:
 
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/number_to_kanji. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/number_to_kanji/blob/main/CODE_OF_CONDUCT.md).
+```
+rake
+```
 
 ## License
 

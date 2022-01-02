@@ -8,8 +8,8 @@ require_relative 'lib/number_to_kanji/version'
   spec.authors = ['Yamaguchi Takuya']
   spec.email = ['yamat47.thirddown@gmail.com']
 
-  spec.summary = '後で書く'
-  spec.description = '後で書く'
+  spec.summary = 'Ruby Number translator to Japanese Kanji.'
+  spec.description = 'NumberToKanji is a Ruby Gem that translates number (integer) to Japanese Kanji. It supports numbers between 0 to 10^23 ("垓").'
   spec.homepage = 'https://github.com/yamat47/number_to_kanji'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 2.6.0'
