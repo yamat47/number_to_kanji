@@ -1,12 +1,17 @@
 # frozen_string_literal: true
 
+require_relative "number_to_kanji/exceptions"
 require_relative 'number_to_kanji/kanji_map'
 require_relative "number_to_kanji/small_number_to_kanji"
 require_relative "number_to_kanji/version"
 
 module NumberToKanji
+  RANGE_END = 1000000000000000000000000
+
   def call(number)
     raise TypeError unless number.is_a?(Integer)
+    raise Exceptions::NegativeNumberError if number < 0
+    raise RangeError.new('Numbers equal to or larger than 10^24 is not supported.') if number >= RANGE_END
 
     return KANJI_MAP[0] if number.zero?
 

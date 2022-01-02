@@ -1,11 +1,16 @@
 # frozen_string_literal: true
 
+require_relative "./exceptions"
 require_relative './kanji_map'
 
 module NumberToKanji
   module SmallNumberToKanji
+    RANGE_END = 10000
+
     def call(number)
       raise TypeError unless number.is_a?(Integer)
+      raise Exceptions::NegativeNumberError if number < 0
+      raise RangeError.new('Numbers equal to or larger than 10^4 is not supported.') if number >= RANGE_END
 
       return KANJI_MAP[0] if number.zero?
 

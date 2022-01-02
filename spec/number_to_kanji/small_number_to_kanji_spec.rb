@@ -71,10 +71,23 @@ RSpec.describe NumberToKanji::SmallNumberToKanji do
       end
     end
 
+    context '一万以上の数字のとき' do
+      specify '例外を吐くこと' do
+        expect { described_class.call(10000) }.to raise_error RangeError
+      end
+    end
+
+    context '負の数のとき' do
+      specify '例外を吐くこと' do
+        expect { described_class.call(-1) }.to raise_error NumberToKanji::Exceptions::NegativeNumberError
+      end
+    end
+
     context '整数以外のとき' do
       specify '例外を吐くこと' do
         expect { described_class.call('1') }.to raise_error TypeError
         expect { described_class.call(1.0) }.to raise_error TypeError
+        expect { described_class.call(-1.0) }.to raise_error TypeError
         expect { described_class.call([1, 2]) }.to raise_error TypeError
       end
     end
