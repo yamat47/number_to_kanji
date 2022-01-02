@@ -1,13 +1,29 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-rake
+  - rubocop-rspec
+
 AllCops:
-  TargetRubyVersion: 2.6
+  EnabledByDefault: true
 
-Style/StringLiterals:
-  Enabled: true
-  EnforcedStyle: double_quotes
+# MITなのでファイルの著作権は記載しない。
+Style/Copyright:
+  Enabled: false
 
-Style/StringLiteralsInInterpolation:
-  Enabled: true
-  EnforcedStyle: double_quotes
+# コメントを日本語で記述するのを許容する。
+Style/AsciiComments:
+  Enabled: false
 
-Layout/LineLength:
-  Max: 120
+# contextの記述を日本語で記述するのを許容する。
+RSpec/ContextWording:
+  Enabled: false
+
+# 一つのテストで複数の内容を検証するのを許容する。
+# ただし複数の振る舞いを検証するのは避ける。
+RSpec/MultipleExpectations:
+  Enabled: false
+
+# elseがない場合にはcase文ではなくif文を許容する。
+Style/MissingElse:
+  EnforcedStyle: case
