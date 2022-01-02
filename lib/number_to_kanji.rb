@@ -13,9 +13,7 @@ module NumberToKanji
     raise(::TypeError) unless number.is_a?(::Integer)
     raise(::NumberToKanji::Exceptions::NegativeNumberError) if number.negative?
 
-    if number >= ::NumberToKanji::RANGE_END
-      raise(::RangeError, 'Numbers equal to or larger than 10^24 is not supported.')
-    end
+    raise(::RangeError, 'Numbers equal to or larger than 10^24 is not supported.') if number >= ::NumberToKanji::RANGE_END
 
     return ::NumberToKanji::KANJI_MAP[0] if number.zero?
 
