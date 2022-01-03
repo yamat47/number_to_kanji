@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    number_to_kanji (1.0.0)
+    number_to_kanji (1.0.1)
 
 GEM
   remote: https://rubygems.org/

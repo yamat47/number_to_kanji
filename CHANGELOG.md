@@ -19,6 +19,11 @@ Change Log の形式は [Keep a Changelog](http://keepachangelog.com/) に従い
 
 ### Security
 
+## [1.0.1] - 2022-01-03
+### Added
+
+- [#2](https://github.com/yamat47/number_to_kanji/pull/2) 日本語の README を追加した。([@yamat47](https://github.com/yamat47))
+
 ## [1.0.0] - 2022-01-02
 
 - Initial release
