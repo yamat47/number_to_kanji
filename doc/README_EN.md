@@ -3,7 +3,7 @@ NumberToKanji is a Ruby Gem that translates number (integer) to Japanese Kanji.
 It supports numbers between 0 to 10^24 ("垓").
 
 ## Installation
-Add this line to your application's Gemfile:
+Add this line to your application's `Gemfile`:
 
 ```ruby
 gem 'number_to_kanji'

@@ -3,7 +3,7 @@ NumberToKanji は英数字を日本語に変換する Ruby gem です。
 現在は「垓」までの正の整数をサポートしています。
 
 ## インストール
-Gemfile にこの行を追加してください：
+`Gemfile` にこの行を追加してください：
 
 ```ruby
 gem 'number_to_kanji'
