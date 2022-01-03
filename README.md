@@ -1,4 +1,6 @@
 # NumberToKanji
+日本語 | [English](./doc/README_EN.md)
+
 NumberToKanji は英数字を日本語に変換する Ruby gem です。
 現在は「垓」までの正の整数をサポートしています。
 

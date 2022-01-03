@@ -1,4 +1,6 @@
 # NumberToKanji
+[日本語](../README.md) | English
+
 NumberToKanji is a Ruby Gem that translates number (integer) to Japanese Kanji.
 It supports numbers between 0 to 10^24 ("垓").
 
