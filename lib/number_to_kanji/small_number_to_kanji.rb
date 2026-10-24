@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative './exceptions'
-require_relative './kanji_map'
+require_relative 'exceptions'
+require_relative 'kanji_map'
 
 module NumberToKanji
   module SmallNumberToKanji
