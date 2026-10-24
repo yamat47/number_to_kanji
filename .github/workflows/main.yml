@@ -22,9 +22,11 @@ jobs:
           - '4.0'
 
     steps:
-    - uses: actions/checkout@v2
+    # github-toolkit は自分で管理しているリポジトリで、上流 action の SHA 固定と更新は toolkit 側で行う。
+    # そのため @main を直接追いかける。toolkit の main の変更は、レビューを通さず次の CI からそのまま入る。
+    - uses: yamat47/github-toolkit/actions/checkout@main
     - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
+      uses: yamat47/github-toolkit/actions/setup-ruby@main
       with:
         ruby-version: ${{ matrix.ruby }}
         bundler-cache: true
