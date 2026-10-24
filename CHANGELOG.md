@@ -13,6 +13,8 @@ Change Log の形式は [Keep a Changelog](http://keepachangelog.com/) に従い
 
 ### Removed
 
+- [#10](https://github.com/yamat47/number_to_kanji/pull/10) Ruby 3.2 以前のサポートをやめ、必要な Ruby を 3.3 以上にした。([@yamat47](https://github.com/yamat47))
+
 ### Fixed
 
 ### Security
