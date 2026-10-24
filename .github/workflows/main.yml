@@ -12,13 +12,14 @@ jobs:
     runs-on: ubuntu-latest
     name: Ruby ${{ matrix.ruby }}
     strategy:
+      # 一つの版の失敗で他の版を打ち切ると、どの版で通るのかが分からなくなる。
+      fail-fast: false
       matrix:
+        # EOL を迎えていないリリース版だけを並べる。https://www.ruby-lang.org/en/downloads/branches/
         ruby:
-          - 'head'
-          - '3.1'
-          - '3.0'
-          - '2.7'
-          - '2.6'
+          - '3.3'
+          - '3.4'
+          - '4.0'
 
     steps:
     - uses: actions/checkout@v2
