@@ -12,7 +12,7 @@ require_relative 'lib/number_to_kanji/version'
   spec.description = 'NumberToKanji is a Ruby Gem that translates number (integer) to Japanese Kanji. It supports numbers between 0 to 10^23 ("垓").'
   spec.homepage = 'https://github.com/yamat47/number_to_kanji'
   spec.license = 'MIT'
-  spec.required_ruby_version = '>= 2.6.0'
+  spec.required_ruby_version = '>= 3.3.0'
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/yamat47/number_to_kanji'
