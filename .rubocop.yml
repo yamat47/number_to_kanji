@@ -1,6 +1,6 @@
 inherit_from: .rubocop_todo.yml
 
-require:
+plugins:
   - rubocop-rake
   - rubocop-rspec
 
@@ -27,3 +27,12 @@ RSpec/MultipleExpectations:
 # elseがない場合にはcase文ではなくif文を許容する。
 Style/MissingElse:
   EnforcedStyle: case
+
+# 開発用の依存は gemspec の add_development_dependency に書く。
+Gemspec/DevelopmentDependencies:
+  EnforcedStyle: gemspec
+
+# KANJI_MAP は数値をキーにした Hash で、[0] は先頭要素ではなくキー 0 の値を引く。
+# この cop はレシーバが Array か判別できず、自動修正の first は [キー, 値] の組を返してしまう。
+Style/ArrayFirstLast:
+  Enabled: false
